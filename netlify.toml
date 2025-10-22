@@ -1,0 +1,38 @@
+[build]
+  # Build command for your React app
+  command = "npm run build"
+  
+  # Directory where the built files are located
+  publish = "dist"
+
+[build.environment]
+  # Node.js version for functions
+  NODE_VERSION = "18"
+
+# Function configuration
+[functions]
+  # Directory where your functions are located
+  directory = "netlify/functions"
+
+# Redirect rules for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Headers for functions
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"

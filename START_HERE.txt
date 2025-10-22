@@ -1,0 +1,32 @@
+🚨 IMPORTANT - READ THIS FIRST! 🚨
+
+You're seeing a WHITE SCREEN because Supabase credentials are missing.
+
+QUICK FIX (5 minutes):
+====================
+
+1. Go to: https://supabase.com
+   → Create a new project (wait 2 minutes)
+
+2. Get your credentials:
+   → Settings → API
+   → Copy "Project URL" and "anon public key"
+
+3. Edit the .env file:
+   → Replace the placeholder values with your real credentials
+
+4. Run database setup:
+   → In Supabase: SQL Editor → New Query
+   → Copy contents from database.sql
+   → Paste and click Run
+
+5. Restart dev server:
+   → Stop (Ctrl+C) and run: npm run dev
+
+📚 DETAILED GUIDE:
+==================
+See: FIX_WHITE_SCREEN.md
+Or: QUICK_START.md
+
+The app will work perfectly once you add your Supabase credentials!
+

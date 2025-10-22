@@ -1,0 +1,381 @@
+{
+  "categories": [
+    {
+      "name": "Fruits & Vegetables",
+      "emoji": "🥬"
+    },
+    {
+      "name": "Dairy & Eggs",
+      "emoji": "🥛"
+    },
+    {
+      "name": "Beverages",
+      "emoji": "🥤"
+    },
+    {
+      "name": "Snacks",
+      "emoji": "🍿"
+    },
+    {
+      "name": "Bakery",
+      "emoji": "🍞"
+    },
+    {
+      "name": "Personal Care",
+      "emoji": "🧴"
+    }
+  ],
+  "products": [
+    {
+      "category": "Fruits & Vegetables",
+      "name": "Fresh Bananas",
+      "description": "Fresh organic bananas, rich in potassium and perfect for a healthy snack. These premium bananas are hand-picked at peak ripeness to ensure the best flavor and nutrition. Great for smoothies, baking, or eating on-the-go.",
+      "price": 2.99,
+      "original_price": 3.99,
+      "unit": "1 dozen",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Fruits & Vegetables",
+      "name": "Red Apples",
+      "description": "Crisp and sweet red apples, great for snacking or baking. These juicy apples are grown in organic orchards and are packed with vitamins and fiber. Perfect for apple pie, salads, or eating fresh.",
+      "price": 4.49,
+      "original_price": 5.99,
+      "unit": "1 lb",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Fruits & Vegetables",
+      "name": "Fresh Tomatoes",
+      "description": "Vine-ripened tomatoes bursting with flavor. Grown locally and harvested at peak freshness. Perfect for salads, sandwiches, pasta sauce, or roasting. Rich in lycopene and vitamin C.",
+      "price": 3.99,
+      "original_price": 4.99,
+      "unit": "1 lb",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Fruits & Vegetables",
+      "name": "Baby Carrots",
+      "description": "Sweet and crunchy baby carrots, pre-washed and ready to eat. Perfect for snacking, dipping, or adding to lunchboxes. High in beta-carotene and vitamin A. Great with hummus or ranch dressing.",
+      "price": 2.49,
+      "original_price": 2.99,
+      "unit": "1 lb bag",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Fruits & Vegetables",
+      "name": "Fresh Strawberries",
+      "description": "Juicy, sweet strawberries handpicked at the peak of freshness. These berries are perfect for desserts, smoothies, or eating fresh. Rich in antioxidants and vitamin C. Locally grown when in season.",
+      "price": 5.99,
+      "original_price": 7.49,
+      "unit": "1 pint",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Dairy & Eggs",
+      "name": "Whole Milk",
+      "description": "Fresh whole milk from local dairy farms, perfect for your morning cereal or coffee. Pasteurized and homogenized for quality and safety. Rich in calcium, protein, and vitamin D. Grade A quality guaranteed.",
+      "price": 3.99,
+      "original_price": 4.49,
+      "unit": "1 gallon",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Dairy & Eggs",
+      "name": "Farm Fresh Eggs",
+      "description": "Organic farm fresh eggs from cage-free hens, packed with protein and nutrients. Large grade AA eggs with bright yellow yolks. Perfect for baking, breakfast, or hard-boiling. High in protein and healthy fats.",
+      "price": 5.99,
+      "original_price": 6.99,
+      "unit": "12 count",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Dairy & Eggs",
+      "name": "Greek Yogurt",
+      "description": "Creamy Greek yogurt with live and active cultures. High in protein and probiotics for digestive health. Made from premium milk with no artificial flavors. Perfect for breakfast bowls, smoothies, or as a healthy snack.",
+      "price": 4.99,
+      "original_price": 5.99,
+      "unit": "32 oz",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Dairy & Eggs",
+      "name": "Cheddar Cheese",
+      "description": "Sharp aged cheddar cheese, perfect for sandwiches, burgers, or cheese boards. Made from high-quality milk and aged to perfection. Rich, bold flavor that melts beautifully. Pre-sliced for convenience.",
+      "price": 6.49,
+      "original_price": 7.99,
+      "unit": "8 oz",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Beverages",
+      "name": "Orange Juice",
+      "description": "100% pure orange juice with no added sugars or preservatives, freshly squeezed every morning. Made from premium Florida oranges. Rich in vitamin C and antioxidants. Not from concentrate for the freshest taste.",
+      "price": 6.99,
+      "original_price": 7.99,
+      "unit": "64 oz",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Beverages",
+      "name": "Sparkling Water",
+      "description": "Refreshing sparkling water with natural flavors. Zero calories, zero sugar, just pure refreshment. Available in multiple flavors. Perfect alternative to sugary sodas. Eco-friendly recyclable packaging.",
+      "price": 4.99,
+      "original_price": 5.99,
+      "unit": "12 pack",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Beverages",
+      "name": "Green Tea",
+      "description": "Premium green tea bags with natural antioxidants. Smooth, refreshing taste with no bitterness. Each box contains 20 individually wrapped tea bags. Rich in polyphenols and perfect for hot or iced tea.",
+      "price": 5.49,
+      "original_price": 6.99,
+      "unit": "20 bags",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Beverages",
+      "name": "Cold Brew Coffee",
+      "description": "Smooth and rich cold brew coffee concentrate. Just add water or milk for the perfect cup. Made from premium arabica beans. Low acidity and naturally sweet. Makes 8-10 servings.",
+      "price": 8.99,
+      "original_price": 10.99,
+      "unit": "32 oz",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Snacks",
+      "name": "Potato Chips",
+      "description": "Crispy and delicious potato chips made from premium potatoes. Available in various flavors including sea salt, BBQ, and sour cream. Perfectly seasoned and kettle-cooked for extra crunch. Great for parties or snacking.",
+      "price": 3.49,
+      "original_price": 4.49,
+      "unit": "10 oz",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Snacks",
+      "name": "Mixed Nuts",
+      "description": "Premium mixed nuts including almonds, cashews, walnuts, and pecans. Lightly salted and roasted to perfection. High in protein and healthy fats. Perfect for snacking or adding to salads and trail mix.",
+      "price": 7.99,
+      "original_price": 9.99,
+      "unit": "12 oz",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1599599810694-e9ea4a5a4805?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Snacks",
+      "name": "Granola Bars",
+      "description": "Wholesome granola bars made with oats, honey, and real fruit. Perfect for on-the-go breakfast or snacking. No artificial flavors or preservatives. Each box contains 12 individually wrapped bars.",
+      "price": 5.99,
+      "original_price": 6.99,
+      "unit": "12 bars",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1590080876314-181ff7f89c5c?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Bakery",
+      "name": "Whole Wheat Bread",
+      "description": "Soft and fresh whole wheat bread baked daily, perfect for sandwiches and toast. Made with 100% whole wheat flour and no high fructose corn syrup. High in fiber and nutrients. Stays fresh for days.",
+      "price": 2.99,
+      "original_price": 3.49,
+      "unit": "20 oz loaf",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Bakery",
+      "name": "Croissants",
+      "description": "Buttery, flaky croissants baked fresh daily. Made with premium butter and flour for authentic French taste. Perfect for breakfast or afternoon snack. Each pack contains 6 croissants.",
+      "price": 6.99,
+      "original_price": 8.49,
+      "unit": "6 pack",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Bakery",
+      "name": "Chocolate Chip Cookies",
+      "description": "Fresh-baked chocolate chip cookies with premium chocolate chunks. Soft and chewy texture with a rich buttery flavor. Made with real butter and vanilla. Perfect for dessert or snacking.",
+      "price": 4.99,
+      "original_price": 5.99,
+      "unit": "12 cookies",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Personal Care",
+      "name": "Hand Soap",
+      "description": "Moisturizing hand soap with natural ingredients and essential oils. Gentle formula that cleanses without drying. Available in refreshing scents like lavender, citrus, and mint. Pump bottle for easy dispensing.",
+      "price": 3.99,
+      "original_price": 4.99,
+      "unit": "12 oz",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1585933646377-48b489935e41?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Personal Care",
+      "name": "Shampoo & Conditioner",
+      "description": "Professional quality shampoo and conditioner set for all hair types. Sulfate-free formula with natural oils and proteins. Leaves hair soft, shiny, and manageable. Fresh scent that lasts all day.",
+      "price": 12.99,
+      "original_price": 15.99,
+      "unit": "16 oz each",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Personal Care",
+      "name": "Toothpaste",
+      "description": "Fluoride toothpaste for complete oral care. Whitening formula that fights cavities and strengthens enamel. Fresh mint flavor for long-lasting freshness. Dentist recommended. Family-size tube.",
+      "price": 4.49,
+      "original_price": 5.49,
+      "unit": "6 oz",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Fruits & Vegetables",
+      "name": "Green Cucumber",
+      "description": "Fresh and crispy cucumbers perfect for salads and sandwiches. Hydrating and low in calories. Rich in vitamins K and C. Great for skin health and hydration.",
+      "price": 1.99,
+      "original_price": 2.99,
+      "unit": "500g",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1604977042957-7424683ae1e1?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Fruits & Vegetables",
+      "name": "Fresh Spinach",
+      "description": "Nutrient-rich fresh spinach leaves, perfect for salads, smoothies, or cooking. High in iron, vitamins A and C. Organic and pesticide-free. Pre-washed for convenience.",
+      "price": 3.49,
+      "original_price": 4.49,
+      "unit": "300g bunch",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Fruits & Vegetables",
+      "name": "Mango (Alphonso)",
+      "description": "Premium Alphonso mangoes, the king of fruits. Sweet, juicy, and aromatic. Perfectly ripened for immediate consumption. Rich in vitamins A and C. Limited seasonal availability.",
+      "price": 8.99,
+      "original_price": 11.99,
+      "unit": "1 kg",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1553279768-865429fa0078?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Dairy & Eggs",
+      "name": "Paneer (Cottage Cheese)",
+      "description": "Fresh homemade-style paneer made from pure cow's milk. High in protein and calcium. Perfect for curries, grilling, or snacking. No preservatives added.",
+      "price": 6.99,
+      "original_price": 8.49,
+      "unit": "250g",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Dairy & Eggs",
+      "name": "Butter (Salted)",
+      "description": "Creamy salted butter made from fresh cream. Perfect for spreading on bread, cooking, or baking. Rich and smooth texture. Made from 100% cow's milk.",
+      "price": 4.99,
+      "original_price": 5.99,
+      "unit": "200g",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Beverages",
+      "name": "Coconut Water",
+      "description": "100% natural coconut water, packed with electrolytes. Refreshing and hydrating. No added sugar or preservatives. Perfect post-workout drink. Rich in potassium.",
+      "price": 3.99,
+      "original_price": 4.99,
+      "unit": "500ml",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1602881917295-ad052624e326?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Beverages",
+      "name": "Mango Juice",
+      "description": "Fresh mango juice made from Alphonso mangoes. No artificial flavors or colors. Rich, sweet, and naturally delicious. Perfect for summer refreshment.",
+      "price": 5.99,
+      "original_price": 7.49,
+      "unit": "1 liter",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Snacks",
+      "name": "Namkeen Mix",
+      "description": "Traditional Indian savory snack mix with peanuts, sev, and spices. Crunchy and flavorful. Perfect for tea-time or parties. Made with quality ingredients.",
+      "price": 2.99,
+      "original_price": 3.99,
+      "unit": "200g",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Snacks",
+      "name": "Popcorn (Butter)",
+      "description": "Ready-to-eat butter popcorn, perfectly popped and seasoned. Movie theater quality at home. Light, fluffy, and delicious. Microwave variety also available.",
+      "price": 3.99,
+      "original_price": 4.99,
+      "unit": "150g",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1578849278619-e73505e9610f?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Bakery",
+      "name": "Garlic Bread",
+      "description": "Freshly baked garlic bread with butter and herbs. Crispy on outside, soft inside. Perfect side for pasta or soups. Ready to heat and serve.",
+      "price": 4.49,
+      "original_price": 5.99,
+      "unit": "4 pieces",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1573140401552-3fab0b24f5e6?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Bakery",
+      "name": "Sandwich Bread",
+      "description": "Soft white sandwich bread, perfect for sandwiches and toast. Made with premium flour and fresh ingredients. Stays soft for days. Great for breakfast.",
+      "price": 2.49,
+      "original_price": 2.99,
+      "unit": "400g loaf",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Personal Care",
+      "name": "Face Wash",
+      "description": "Gentle daily face wash for all skin types. Deep cleanses pores while maintaining skin's natural moisture. Contains natural ingredients. Dermatologist tested. Fresh and glowing skin.",
+      "price": 5.99,
+      "original_price": 7.99,
+      "unit": "150ml",
+      "featured": true,
+      "image_url": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=500&fit=crop"
+    },
+    {
+      "category": "Personal Care",
+      "name": "Body Lotion",
+      "description": "Moisturizing body lotion with natural oils and vitamin E. Absorbs quickly without greasy feel. Keeps skin soft and hydrated all day. Pleasant fragrance.",
+      "price": 7.99,
+      "original_price": 9.99,
+      "unit": "200ml",
+      "featured": false,
+      "image_url": "https://images.unsplash.com/photo-1571875257727-256c39da42af?w=500&h=500&fit=crop"
+    }
+  ]
+}
+

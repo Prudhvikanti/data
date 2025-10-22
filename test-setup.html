@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCommerce Setup Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .box {
+            border: 2px solid #22c55e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            background: #f0fdf4;
+        }
+        .warning {
+            border-color: #f59e0b;
+            background: #fffbeb;
+        }
+        .error {
+            border-color: #ef4444;
+            background: #fef2f2;
+        }
+        h1 { color: #22c55e; }
+        code {
+            background: #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        ol { padding-left: 20px; }
+        li { margin: 10px 0; }
+        .emoji { font-size: 2em; }
+    </style>
+</head>
+<body>
+    <h1>🚨 QuickCommerce - White Screen Fix</h1>
+    
+    <div class="box error">
+        <h2>❌ Problem: White Screen</h2>
+        <p><strong>Reason:</strong> Your app needs Supabase credentials to work, but they're currently using placeholder values.</p>
+    </div>
+
+    <div class="box">
+        <h2>✅ Solution: Set Up Supabase (5 minutes)</h2>
+        
+        <h3>Step 1: Create Supabase Project</h3>
+        <ol>
+            <li>Go to <a href="https://supabase.com" target="_blank"><strong>supabase.com</strong></a></li>
+            <li>Click <strong>"New Project"</strong></li>
+            <li>Fill in:
+                <ul>
+                    <li>Project name: <code>quickcommerce</code></li>
+                    <li>Database password: (choose any password)</li>
+                    <li>Region: (choose closest to you)</li>
+                </ul>
+            </li>
+            <li>Click <strong>"Create project"</strong></li>
+            <li>⏰ Wait ~2 minutes for setup to complete</li>
+        </ol>
+
+        <h3>Step 2: Get Your Credentials</h3>
+        <ol>
+            <li>In your Supabase project dashboard</li>
+            <li>Click <strong>Settings</strong> ⚙️ (left sidebar)</li>
+            <li>Click <strong>API</strong></li>
+            <li>Copy these TWO values:
+                <ul>
+                    <li><strong>Project URL</strong> (looks like: <code>https://xxxxx.supabase.co</code>)</li>
+                    <li><strong>anon public key</strong> (long text starting with <code>eyJ...</code>)</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Step 3: Update .env File</h3>
+        <ol>
+            <li>Open the <code>.env</code> file in your project folder</li>
+            <li>Replace the placeholder values with your real values:
+                <pre style="background: #1f2937; color: #fff; padding: 15px; border-radius: 5px; overflow-x: auto;">
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.your-key-here...</pre>
+            </li>
+            <li><strong>Important:</strong> Use your ACTUAL values, not these examples!</li>
+        </ol>
+
+        <h3>Step 4: Set Up Database</h3>
+        <ol>
+            <li>In Supabase, click <strong>SQL Editor</strong> (left sidebar)</li>
+            <li>Click <strong>"New Query"</strong></li>
+            <li>Open <code>database.sql</code> from your project</li>
+            <li>Copy <strong>ALL</strong> the contents</li>
+            <li>Paste into the SQL Editor</li>
+            <li>Click <strong>"Run"</strong> (or press Cmd/Ctrl + Enter)</li>
+            <li>You should see: ✅ "Success. No rows returned"</li>
+        </ol>
+
+        <h3>Step 5: Disable Email Confirmation (for testing)</h3>
+        <ol>
+            <li>In Supabase, go to <strong>Authentication</strong> → <strong>Providers</strong></li>
+            <li>Click on <strong>Email</strong></li>
+            <li>Turn OFF: <strong>"Confirm email"</strong></li>
+            <li>Click <strong>Save</strong></li>
+        </ol>
+
+        <h3>Step 6: Restart Your Dev Server</h3>
+        <ol>
+            <li>In your terminal, press <code>Ctrl+C</code> to stop the server</li>
+            <li>Run: <code>npm run dev</code></li>
+            <li>Open the localhost URL in your browser</li>
+        </ol>
+    </div>
+
+    <div class="box">
+        <h2>🎉 Success!</h2>
+        <p>If you followed all steps, you should now see:</p>
+        <ul>
+            <li>✅ Homepage with categories and featured products</li>
+            <li>✅ Working navigation</li>
+            <li>✅ No white screen!</li>
+        </ul>
+        
+        <h3>Test the App:</h3>
+        <ol>
+            <li>Click <strong>"Sign Up"</strong> and create an account</li>
+            <li>Browse products</li>
+            <li>Add items to cart</li>
+            <li>Complete checkout</li>
+        </ol>
+    </div>
+
+    <div class="box warning">
+        <h2>❓ Still Having Issues?</h2>
+        <ul>
+            <li><strong>Check browser console:</strong> Press F12 → Console tab for errors</li>
+            <li><strong>Verify .env:</strong> Make sure values are NOT placeholders</li>
+            <li><strong>Check database:</strong> Supabase → Table Editor → should see products table</li>
+            <li><strong>See detailed guides:</strong>
+                <ul>
+                    <li><code>FIX_WHITE_SCREEN.md</code></li>
+                    <li><code>QUICK_START.md</code></li>
+                    <li><code>SETUP.md</code></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <hr style="margin: 40px 0;">
+    <p style="text-align: center; color: #6b7280;">
+        📚 For more help, check the documentation files in your project folder<br>
+        💚 Built with React + Supabase
+    </p>
+</body>
+</html>
+
