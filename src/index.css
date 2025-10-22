@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   /* Mobile App Feel - Native-like styling with better fitting */
   html, body {
@@ -374,11 +375,6 @@ button, a, input, select, textarea {
   animation: haptic-pulse 0.2s ease-out;
 }
 
-/* Import enhanced UI improvements */
-@import url('./utils/uiImprovements.css');
-
-/* Import mobile optimizations */
-@import url('./utils/mobileOptimizations.css');
 
 /* Mobile navigation improvements */
 .mobile-nav-safe {
@@ -458,6 +454,8 @@ body {
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
 }
+
+
 
 
 
