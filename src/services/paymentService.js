@@ -85,7 +85,7 @@ export async function processPayment(orderData, paymentMethod = 'upi') {
     const paymentSession = await createPaymentSession(orderData)
     console.log('Payment session created:', paymentSession)
 
-    // Step 2: Initialize Cashfree SDK
+    // Step 2: Initialize Cashfree SDK for production
     const cashfree = await initializeCashfree()
     
     // Step 3: Open Cashfree checkout

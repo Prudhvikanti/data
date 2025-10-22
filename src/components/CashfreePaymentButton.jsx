@@ -50,7 +50,7 @@ export default function CashfreePaymentButton({ amount, orderId, onPaymentSucces
       // Initialize Cashfree payment
       if (window.Cashfree) {
         const cashfree = new window.Cashfree({
-          mode: 'sandbox' // Change to 'production' for live payments
+          mode: 'production' // Production mode for real-time payments
         })
 
         const checkoutOptions = {
