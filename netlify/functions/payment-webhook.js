@@ -4,8 +4,34 @@
 const crypto = require('crypto');
 
 exports.handler = async (event, context) => {
+  // Enable CORS
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type, x-webhook-signature',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  };
+
+  // Handle preflight requests
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({ message: 'CORS preflight' })
+    };
+  }
+
+  // Only allow POST requests
+  if (event.httpMethod !== 'POST') {
+    return {
+      statusCode: 405,
+      headers,
+      body: JSON.stringify({ error: 'Method not allowed' })
+    };
+  }
+
   try {
     console.log('Payment webhook received:', JSON.stringify(event.body, null, 2));
+    console.log('Headers:', JSON.stringify(event.headers, null, 2));
     
     // Parse webhook data
     const webhookData = JSON.parse(event.body);
@@ -80,6 +106,7 @@ exports.handler = async (event, context) => {
     
     return {
       statusCode: 200,
+      headers,
       body: JSON.stringify({ 
         success: true, 
         message: 'Webhook processed successfully',
@@ -92,6 +119,7 @@ exports.handler = async (event, context) => {
     console.error('Webhook processing error:', error);
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({ 
         success: false, 
         error: error.message 
