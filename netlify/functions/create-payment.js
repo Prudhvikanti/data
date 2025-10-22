@@ -71,6 +71,7 @@ exports.handler = async (event, context) => {
     
     console.log('Calling Cashfree API:', apiUrl);
     console.log('Order ID:', orderId);
+    console.log('Payload:', JSON.stringify(payload, null, 2));
     
     const response = await fetch(apiUrl, {
       method: 'POST',

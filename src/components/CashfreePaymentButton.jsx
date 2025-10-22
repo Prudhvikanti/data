@@ -89,23 +89,59 @@ export default function CashfreePaymentButton({ amount, orderId, onPaymentSucces
     }
   }
 
-  // Simulate payment session creation (replace with actual API call)
+  // Use real payment session creation via Netlify function
   const createPaymentSession = async (data) => {
-    // This should be replaced with actual API call to your backend
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // Simulate occasional failures for testing
-        if (Math.random() < 0.1) {
-          reject(new Error('Payment session creation failed'))
-          return
+    try {
+      console.log('Creating payment session via Netlify function...')
+      console.log('Order data:', data)
+      
+      const netlifyFunctionUrl = import.meta.env.VITE_NETLIFY_FUNCTION_URL || '/.netlify/functions/create-payment'
+      
+      const requestPayload = {
+        orderData: {
+          amount: parseFloat(data.amount).toFixed(2),
+          customerId: data.customerId || `CUST_${Date.now()}`,
+          customerEmail: data.customerEmail || 'customer@example.com',
+          customerPhone: data.customerPhone || '9999999999',
+          customerName: data.customerName || 'Customer',
+          returnUrl: `${window.location.origin}/payment-success?order_id=${data.orderId}&cf_order_id={cf_order_id}`,
+          notifyUrl: `${window.location.origin}/.netlify/functions/payment-webhook`
         }
-        resolve({
-          paymentSessionId: `session_${Date.now()}`,
-          orderId: data.orderId,
-          amount: data.amount
-        })
-      }, 1000)
-    })
+      }
+      
+      console.log('Calling Netlify function:', netlifyFunctionUrl)
+      const response = await fetch(netlifyFunctionUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestPayload)
+      })
+      
+      const result = await response.json()
+      console.log('Netlify function response:', result)
+      
+      if (!response.ok || !result.success) {
+        console.error('Netlify function error:', result)
+        throw new Error(result.error || 'Failed to create payment session')
+      }
+      
+      console.log('✓ Payment session created successfully!')
+      console.log('Session ID:', result.data.payment_session_id)
+      
+      return {
+        paymentSessionId: result.data.payment_session_id,
+        orderId: result.data.order_id || data.orderId,
+        amount: result.data.order_amount
+      }
+    } catch (error) {
+      console.error('Payment session error:', error)
+      if (error.message.includes('Failed to fetch') || error.name === 'TypeError') {
+        console.error('❌ Netlify function not reachable. Make sure functions are deployed.')
+        throw new Error('Payment function not available. Please deploy Netlify functions.')
+      }
+      throw error
+    }
   }
 
   return (
