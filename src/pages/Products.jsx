@@ -132,7 +132,7 @@ export default function Products() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="product-grid-mobile md:grid-cols-4 gap-6">
           {/* Filters Sidebar - Desktop Only */}
           <aside className="hidden md:block">
             <div className="card sticky top-20">

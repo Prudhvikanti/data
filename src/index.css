@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import mobile fitting fixes */
+@import url('./MOBILE_FITTING_FIX.css');
+
 
 @layer base {
   /* Mobile App Feel - Native-like styling with better fitting */

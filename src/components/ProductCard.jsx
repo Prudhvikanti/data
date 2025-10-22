@@ -44,7 +44,7 @@ export default function ProductCard({ product, compact = false }) {
     <>
       <Link
         to={`/products/${product.id}`}
-        className={`group relative overflow-hidden bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 ${
+        className={`group relative overflow-hidden bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 mobile-card ${
           compact ? 'p-2 md:p-3' : 'p-3 md:p-4'
         } hover:-translate-y-1 active:translate-y-0 active:shadow-md`}
       >
