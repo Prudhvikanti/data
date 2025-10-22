@@ -45,7 +45,7 @@ exports.handler = async (event, context) => {
       throw new Error('Cashfree credentials not configured');
     }
     
-    // Cashfree API endpoint
+    // Cashfree API endpoint - Use orders endpoint for payment sessions
     const apiUrl = mode === 'production'
       ? 'https://api.cashfree.com/pg/orders'
       : 'https://sandbox.cashfree.com/pg/orders';
@@ -85,20 +85,32 @@ exports.handler = async (event, context) => {
     
     const data = await response.json();
     
+    console.log('Cashfree API Response:', JSON.stringify(data, null, 2));
+    
     if (!response.ok) {
       console.error('Cashfree API Error:', data);
-      throw new Error(data.message || 'Failed to create payment session');
+      throw new Error(data.message || data.error || 'Failed to create payment session');
     }
     
     console.log('✓ Payment session created successfully');
     console.log('Session ID:', data.payment_session_id);
+    
+    // Ensure we have a valid payment_session_id
+    if (!data.payment_session_id) {
+      throw new Error('Payment session ID not received from Cashfree');
+    }
     
     return {
       statusCode: 200,
       headers,
       body: JSON.stringify({
         success: true,
-        data: data,
+        data: {
+          payment_session_id: data.payment_session_id,
+          order_id: data.order_id || orderId,
+          order_amount: data.order_amount,
+          order_currency: data.order_currency
+        },
         order_id: orderId
       })
     };
