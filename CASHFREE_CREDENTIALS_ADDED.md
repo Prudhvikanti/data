@@ -10,8 +10,8 @@ Your Cashfree payment gateway has been successfully configured with your product
 
 ### 1. ✅ Environment Variables Added
 Created `.env.local` file with your complete configuration:
-- **Cashfree App ID:** `REDACTED_CASHFREE_APP_ID`
-- **Cashfree Secret Key:** `cfsk_ma_prod_***` (production key)
+-- **Cashfree App ID:** `REDACTED_CASHFREE_APP_ID`
+-- **Cashfree Secret Key:** `REDACTED_CASHFREE_SECRET_KEY` (production key)
 - **Cashfree Mode:** `production`
 - **Supabase URL:** `https://xifvcnyqounfbmcgzwen.supabase.co`
 - **Supabase Anon Key:** Configured ✅
@@ -143,7 +143,7 @@ All payment methods are now **LIVE** and ready to use:
 
 ### `.env.local` (Created)
 ```bash
-# Cashfree Payment Gateway
+# Cashfree Payment Gateway (use environment variables; do NOT commit secrets)
 VITE_CASHFREE_APP_ID=REDACTED_CASHFREE_APP_ID
 VITE_CASHFREE_SECRET_KEY=REDACTED_CASHFREE_SECRET_KEY
 VITE_CASHFREE_MODE=production

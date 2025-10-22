@@ -1,8 +1,8 @@
 # 🚀 Quick Deploy Setup - Your Cashfree Credentials
 
 ## 🔐 Your Cashfree Credentials:
-- **App ID:** `REDACTED_CASHFREE_APP_ID`
-- **Secret Key:** `REDACTED_CASHFREE_SECRET_KEY`
+-- **App ID:** `REDACTED_CASHFREE_APP_ID`
+-- **Secret Key:** `REDACTED_CASHFREE_SECRET_KEY`
 - **Mode:** `production`
 
 ## 🚀 Quick Deployment Options:
@@ -40,6 +40,7 @@ netlify deploy --prod
 In your Netlify dashboard → Site settings → Environment variables:
 
 ```bash
+# Required Variables (set in deployment UI; do NOT commit)
 CASHFREE_APP_ID=REDACTED_CASHFREE_APP_ID
 CASHFREE_SECRET_KEY=REDACTED_CASHFREE_SECRET_KEY
 CASHFREE_MODE=production
